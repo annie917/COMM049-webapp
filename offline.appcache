@@ -1,0 +1,47 @@
+CACHE MANIFEST
+# 20 November 2016 13:22
+
+# explicitly cached entries
+CACHE:
+index.html
+elvetham.html
+pond.html
+weather.html
+mywalks.html
+offline.html
+contact.html
+js/mywalks.js
+js/geolocation.js
+js/weather.js
+js/contact.js
+https://code.jquery.com/jquery-2.1.1.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf
+css/normalize.css
+css/fleetdogwalks.css
+svg/blank.svg
+svg/moon.svg
+svg/nightrain.svg
+svg/pawprint.svg
+svg/snow.svg
+svg/cloud.svg
+svg/nightcloud.svg
+svg/nightsnow.svg
+svg/rain.svg
+svg/sun.svg
+img/Banner.jpg
+img/FleetPondHeath.jpg
+img/FPBanner.jpg
+img/TurnersPond.jpg
+https://poweredby.yahoo.com/purple.png
+https://maps.google.com/mapfiles/ms/icons/yellow-dot.png
+
+NETWORK:
+*
+
+FALLBACK:
+/ offline.html

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg version="1.1"
+     baseProfile="full"
+     width="300" height="300"
+     xmlns="http://www.w3.org/2000/svg"
+     preserveAspectRatio="xMinYMin meet"
+     viewBox="0 0 300 300">
+  <rect id="pawBack" width="300" height="300" style="fill: #5ac0de;"></rect>
+  <circle id="pawCircle" cx="125" cy="175" r="75" style="fill: #ffffff;" />
+  <circle class="pawToe" cx="120" cy="55" r="30" style="fill: #ffffff;" />
+  <circle class="pawToe" cx="185" cy="75" r="30" style="fill: #ffffff;" />
+  <circle class="pawToe" cx="230" cy="130" r="30" style="fill: #ffffff;" />
+  <circle class="pawToe" cx="240" cy="200" r="30" style="fill: #ffffff;" />
+</svg>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB" manifest="offline.appcache">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fleet Dog Walks | Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/weather.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/fleetdogwalks.css">
+    <meta name="description" content="Fleet dog walk app, page with four day weather forecast for the area." />
+  </head>
+  <body>  
+    <section class="container"> <!--main Bootstrap container-->
+        <a href = "index.html">
+          <div class="headHome">
+        	  <svg class="pawLogo" width="40" height="40">
+						  <circle cx="16" cy="25" r="10"></circle>
+							<circle cx="13" cy="7" r="4"><animate attributeName="r" attributeType="XML" begin="0s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="25" cy="9" r="4"><animate attributeName="r" attributeType="XML" begin="1s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="6s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+ 							<circle cx="33" cy="18" r="4"><animate attributeName="r" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="5s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="33" cy="30" r="4"><animate attributeName="r" attributeType="XML" begin="3s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="4s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+					  </svg>
+			    </div>
+		    </a>
+			<header>
+				<h1>Weather</h1>
+			</header>
+			<h2>Four Day Weather Forecast</h2>
+			<div class="row">
+			<!-- Set up panels that will hold weather information - empty as populated from script -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel">
+			      <div class="panel-heading"><h3 id="dayName0"></h3></div>
+            <img id="day0" src="svg/blank.svg" alt="Today's weather" width="100%">
+            <div class="panel-body">
+              <h4 id="dayText0" class="panel-title"></h4>
+              <p id="dayTemp0" class="panel-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+			    <div class="panel">
+			      <div class="panel-heading"><h3 id="dayName1"></h3></div>
+            <img id="day1" src="svg/blank.svg" alt="Tomorrow's weather" width="100%">
+            <div class="panel-body">
+              <h4 id="dayText1" class="panel-title"></h4>
+              <p id="dayTemp1" class="panel-text"></p>
+           </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+			    <div class="panel">
+ 			      <div class="panel-heading"><h3 id="dayName2"></h3></div>
+           <img id="day2" src="svg/blank.svg" alt="Day 3 weather" width="100%">
+            <div class="panel-body">
+              <h4 id="dayText2" class="panel-title"></h4>
+              <p id="dayTemp2" class="panel-text"></p>
+           </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+			    <div class="panel">
+			      <div class="panel-heading"><h3 id="dayName3"></h3></div>
+            <img id="day3" src="svg/blank.svg" alt="Day 4 weather" width="100%">
+            <div class="panel-body">
+              <h4 id="dayText3" class="panel-title"></h4>
+             <p id="dayTemp3" class="panel-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="weatherLink" class="well"><p><a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/purple.png" 
+      width="134" height="29" alt="Yahoo logo"/></a>  Click <a href="https://uk.news.yahoo.com/weather/united-kingdom/england/fleet-27335404" 
+      target="_blank">here</a> for full forecast (opens in new window).</p></div>      
+			<footer>
+				<p class="text-center"><span class="glyphicon glyphicon-envelope"></span><a href="contact.html" 
+				class="white"> Contact</a></p>
+			</footer>
+    </section> <!--end main Bootstrap container-->
+  </body>
+</html>

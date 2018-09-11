@@ -1,0 +1,271 @@
+/* Give header of main page a background image and padding */
+
+.fdwHeader {
+  background-image: url("../img/Banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+
+}
+
+.headHome {
+  height: 40px;
+  background-color: #5ac0de;
+  margin-top: 20px;
+}
+
+.pawLogo {
+  fill: #ffffff; 
+  float: right;
+}
+
+/* Styling for weather panels */
+.panel {
+  background-color: #f2f2f2;
+}
+
+.panel-heading h3 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.panel-text {
+  font-size: 5em;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.panel-title {
+ font-size: 2.5em;
+}
+
+/* Make h2 white on main page */
+.white {
+  color: #ffffff;
+}
+
+.navMenu a:hover {
+  color:#ffffff;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Default h1 and h2 font sizes for big screen */
+h1 {
+  padding-bottom: 20px;
+  font-size: 6em;
+}
+
+h2 {
+  font-size: 2.25em;
+  padding-bottom: 20px;
+}
+
+/* Height of menu items on big screen and a little padding */
+.menuItem {
+  padding-left: 5px;
+  height: 150px;
+}
+
+/* Specific colours for each menu item */
+#EH {
+  background-color: #f9cf6b;
+  transition: background-color 0.85s ease-in-out; 
+}
+
+.pawY {
+ fill: #f9cf6b; 
+}
+
+
+#FP {
+  background-color: #b8c184;
+  transition: background-color 0.85s ease-in-out; 
+}
+
+.pawG {
+ fill: #b8c184; 
+}
+
+
+#W {
+  background-color: #4d7cd4;
+  transition: background-color 0.85s ease-in-out; 
+}
+
+.pawB {
+ fill: #4d7cd4; 
+}
+
+#MW {
+  background-color: #ff926e;
+  transition: background-color 0.85s ease-in-out; 
+}
+
+.pawC {
+ fill: #ff926e; 
+}
+
+/* Lighten colour of menu item on mouse over, using transitions */
+#EH:hover {
+  background-color: #fbdf9d;
+}
+
+#FP:hover {
+  background-color: #ced4aa;
+}
+
+#W:hover {
+  background-color: #6f95dc;
+}
+
+#MW:hover {
+  background-color: #ffb399;
+}
+
+footer {
+  background-color: #5ac0de;
+  height: 100px;
+  color: #ffffff;
+  padding-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+details {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.alert {
+  margin-top: 10px;
+}  
+
+/* Make menu take up full width of row container */
+.navMenu {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+figcaption {
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+#offline {
+  margin-top: 50px;
+}
+
+/* Position paw graphic near bottom right of each menu item
+   so they will look good on all screen sizes, and won't interfere
+   with text*/
+.paw {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+}
+
+/* Make user name on mywalks.html more striking */
+#userName {
+  font-size: 2em;
+}
+
+.glyphicon-user {
+  font-size: 1em;
+}
+
+/* Space between input elements */
+input, textarea {
+  margin-bottom: 20px;
+}
+
+/* Provide some colour feedback for input fields */
+
+input:valid,
+input:in-range {
+    background: #eaf7fb;
+    border-color: #95d6ea;
+}
+
+input:invalid,
+input:out-of-range {
+    background: #fff7e6;
+    border-color: #ffd480;
+}
+
+textarea:valid,
+textarea:in-range {
+    background: #eaf7fb;
+    border-color: #95d6ea;
+}
+
+textarea:invalid,
+textarea:out-of-range {
+    background: #fff7e6;
+    border-color: #ffd480;
+}
+
+.btn-md {
+  margin-top: 10px;
+}
+
+.mapCont {
+  margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+/* Extra small devices (phones, less than 768px) */
+
+@media screen and (max-width: 767px) {
+
+/* Make header and text more compact on mobile */
+
+  .fdwHeader {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+	h1 {
+		font-size: 3em;
+	}
+	
+	h2 {
+	  font-size: 2em;
+  }
+
+/* Reduce menu item height to look sensible */	
+	.menuItem {
+		height: 75px;
+	}
+
+
+/* Make footer more in proportion */
+  footer {
+    height: 75px;
+    padding-top: 30px;
+  }
+  
+}
+
+/* Small devices (tablets, 768px to 1199px (includes landscape iPad)) */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+/* Make heading text a little smaller */
+	h1 {
+		font-size: 4em;
+	}
+	
+/* Reduce menu item height to look sensible */	
+	.menuItem {
+		height: 100px;
+	}
+
+
+}
+

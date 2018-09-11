@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-GB" manifest="offline.appcache">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fleet Dog Walks | Elvetham Heath</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/geolocation.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/fleetdogwalks.css">
+    <meta name="description" content="Fleet dog walks app, page with information about Elvetham Heath Nature Reserve, 
+          with a button to get directions to the car park from current location." />
+  </head>
+  <body>
+    <div class="container"> <!--main Bootstrap container-->
+      <header>
+        <a href = "index.html">
+          <div class="headHome">
+        	  <svg class="pawLogo" width="40" height="40">
+						  <circle cx="16" cy="25" r="10"></circle>
+							<circle cx="13" cy="7" r="4"><animate attributeName="r" attributeType="XML" begin="0s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="25" cy="9" r="4"><animate attributeName="r" attributeType="XML" begin="1s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="6s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+ 							<circle cx="33" cy="18" r="4"><animate attributeName="r" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="5s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="33" cy="30" r="4"><animate attributeName="r" attributeType="XML" begin="3s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="4s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+					  </svg>
+			    </div>
+		    </a>
+        <h1>Elvetham Heath</h1>
+      </header>
+      <div class="row">
+        <section class="col-sm-6">
+          <h2>Elvetham Heath Nature Reserve</h2>
+          <p>The nature reserve is a 48 acre contained within the Elvetham Heath residential development.</p>
+          <p>There is a small pond which is home to an array of waterfowl, including a resident heron.  There are trails, 
+             a picnic area, and several play parks for young children.</p>
+          <p>For more information , see the <a href="http://www.elvethamheath.org.uk/nature-reserve.html" target="_blank">Elvetham Heath Parish Council</a> website.</p>
+          <img class="img-responsive img-rounded" src="img/TurnersPond.jpg" alt="Turner's Pond, Elvetham Heath" width="500">
+        </section> <!--end col-sm-6-->
+        <section id="parking" class="col-sm-6" >
+          <h2>Parking</h2>
+          <!-- Wrap iframe in a figure tag to provide accessibility information -->
+          <figure>
+						<figcaption>Map with marker to show Elvetham Heath parking area (requires internet connection).</figcaption>
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2495.101285582606!2d-0.8588330095783608!3d51.29086012310121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4874296ff05bc76d%3A0xa589684de86acc56!2sThe+Key%2C+Fleet+GU51!5e0!3m2!1sen!2suk!4v1478886702233" width="600" height="450" allowfullscreen></iframe>
+						</div>
+				  </figure>
+          <details>
+            <summary>Parking is available at The Key</summary>
+            <p>This car park is closed on the 2nd Saturday of each month for a market.</p>
+          </details>
+			    <div class="row"> <!--Nested columns-->
+            <div class="col-xs-12 col-sm-6">
+              <button id="butDirEH" class="butDirect btn btn-info btn-md btn-block">
+    			    <span class="glyphicon glyphicon-map-marker"></span> Get Directions</button>
+  			    </div>
+  			    <div class="col-xs-12 col-sm-6">
+    			    <a id="butOpenMaps" role="button" target="_blank" class="btn btn-info btn-md btn-block">
+    			    <span class='glyphicon glyphicon-new-window'></span> Open in Maps</a>
+  			    </div>
+  			    <div class="col-xs-12 col-sm-6">
+    			    <button id="butTrack" class="btn btn-info btn-md btn-block">
+    			    <span class='glyphicon glyphicon-screenshot'></span> Track Location</button>
+  			    </div>
+  			    <div class="col-xs-12 col-sm-6">
+    			    <button id="butStop" class="btn btn-info btn-md btn-block">
+    			    <span class='glyphicon glyphicon-remove'></span> Stop Tracking</button>
+  			    </div>
+			    </div> <!--End nested columns-->
+        </section> <!--end col-sm-6-->
+      </div> <!--end row container-->
+			<footer>
+				<p class="text-center"><span class="glyphicon glyphicon-envelope"></span><a href="contact.html" 
+				class="white"> Contact</a></p>
+			</footer>
+    </div> <!--end main Bootstrap container-->
+  </body> 
+</html>

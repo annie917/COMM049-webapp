@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-GB" manifest="offline.appcache">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fleet Dog Walks | Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/contact.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/fleetdogwalks.css">
+    <meta name="description" content="Fleet Dog Walks app, contact us page." />
+  </head>
+  <body>  
+    <div class="container"> <!--main Bootstrap container-->
+      <header>
+        <a href = "index.html">
+          <div class="headHome">
+        	  <svg class="pawLogo" width="40" height="40">
+						  <circle cx="16" cy="25" r="10"></circle>
+							<circle cx="13" cy="7" r="4"><animate attributeName="r" attributeType="XML" begin="0s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="25" cy="9" r="4"><animate attributeName="r" attributeType="XML" begin="1s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="6s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+ 							<circle cx="33" cy="18" r="4"><animate attributeName="r" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="5s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="33" cy="30" r="4"><animate attributeName="r" attributeType="XML" begin="3s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="4s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+					  </svg>
+			    </div>
+		    </a>
+        <h1>Contact us</h1>
+      </header>
+      <h2>Please fill in the form with your query</h2>
+      <form id="formContact" action="javascript:storeData();">
+	    <div class="form-group">
+        <fieldset>
+          <label for="conName"><span class='glyphicon glyphicon-user'></span> Name: [First Last]</label>
+          <input type="text" class="form-control" id="conName" name="conName" value="" required  pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" >
+          <label for="conDOB"><span class='glyphicon glyphicon-gift'></span> Date of Birth:</label>
+          <input type="date" class="form-control" id="conDOB" name="conDOB" value="" required>
+          <label for="conEmail"><span class='glyphicon glyphicon-envelope'></span> Email:</label>
+          <input type="email" class="form-control" id="conEmail" name="conEmail" value="" required>
+          <label for="conTel"><span class='glyphicon glyphicon-phone'></span> Telephone:</label>
+          <input type="tel" class="form-control" id="conTel" name="conTel" value="">
+          <label for="conEnquiry"><span class='glyphicon glyphicon-question-sign'></span> Enquiry:</label>
+          <textarea class="form-control" id="conEnquiry" name="conEnquiry" required rows="4" cols="50"></textarea>
+          <button id="conSubmit" type="submit" class="btn btn-info btn-md">
+			    <span class="glyphicon glyphicon-play-circle"></span> Submit</button>
+            <button id ='resetContact' type="reset" class="btn btn-info btn-md">
+			    <span class="glyphicon glyphicon-repeat"></span> Reset</button>
+          </fieldset>
+        </div>
+      </form>
+		<footer>
+	      <p class="text-center"><span class="glyphicon glyphicon-envelope"></span><a href="contact.html" 
+				class="white"> Contact</a></p>
+		</footer>
+    </div> <!--end main Bootstrap container-->
+  </body>
+</html>

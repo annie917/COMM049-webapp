@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-GB" manifest="offline.appcache">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fleet Dog Walks | Offline</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/fleetdogwalks.css">
+    <meta name="description" content="Fleet Dog Walks app, page for offline and unable to display resource" />
+  </head>
+  <body>  
+    <div class="container"> <!--main Bootstrap container-->
+      <header>
+        <a href = "index.html">
+          <div class="headHome">
+        	  <svg class="pawLogo" width="40" height="40">
+						  <circle cx="16" cy="25" r="10"></circle>
+							<circle cx="13" cy="7" r="4"><animate attributeName="r" attributeType="XML" begin="0s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="25" cy="9" r="4"><animate attributeName="r" attributeType="XML" begin="1s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="6s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+ 							<circle cx="33" cy="18" r="4"><animate attributeName="r" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="5s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="33" cy="30" r="4"><animate attributeName="r" attributeType="XML" begin="3s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="4s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+					  </svg>
+			    </div>
+		    </a>
+      </header>
+			<div id="offline" class="row">
+        <div class="col-xs-2">
+          <div class="panel">
+	           <img src="svg/pawprint.svg" alt="panel image cap" width="100%">
+           </div>
+        </div>
+        <div class="col-xs-8">
+          <h1>Out for walkies.....</h1>
+          <h2>We can't access the resource you're looking for right now.</h2>
+        </div>
+        <div class="col-xs-2">
+			    <div class="panel">
+	           <img src="svg/pawprint.svg" alt="panel image cap" width="100%">
+           </div>
+          </div>
+        </div> <!-- row -->
+			<footer>
+				<p class="text-center"><span class="glyphicon glyphicon-envelope"></span><a href="contact.html" 
+				class="white"> Contact</a></p>
+			</footer>
+    </div> <!--end main Bootstrap container-->
+  </body>
+</html>

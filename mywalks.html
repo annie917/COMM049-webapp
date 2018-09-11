@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-GB" manifest="offline.appcache">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fleet Dog Walks | My Walks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/mywalks.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/fleetdogwalks.css">
+    <meta name="description" content="Fleet dog walks app, page for logging the user's own walks." />
+  </head>
+  <body>
+    <div class="container"> <!--main Bootstrap container-->
+      <header>
+        <a href = "index.html">
+          <div class="headHome">
+        	  <svg class="pawLogo" width="40" height="40">
+						  <circle cx="16" cy="25" r="10"></circle>
+							<circle cx="13" cy="7" r="4"><animate attributeName="r" attributeType="XML" begin="0s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="7s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="25" cy="9" r="4"><animate attributeName="r" attributeType="XML" begin="1s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                           <animate attributeName="r" attributeType="XML" begin="6s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+ 							<circle cx="33" cy="18" r="4"><animate attributeName="r" attributeType="XML" begin="2s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="5s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+							<circle cx="33" cy="30" r="4"><animate attributeName="r" attributeType="XML" begin="3s" dur="1s" fill="freeze" from="4" to="2" /> 
+                                            <animate attributeName="r" attributeType="XML" begin="4s" dur="1s" fill="freeze" from="2" to="4" /></circle>
+					  </svg>
+			    </div>
+		    </a>
+		    <h1>My Walks</h1>
+	    </header>
+	    <div id="userName"></div> <!--User name will go here-->
+	    <div class="row"> <!--row container-->
+        <section class="col-sm-4">
+		      <h2>Walk Details</h2>
+		      <form action="javascript:addNewWalk();">
+					  <div class="form-group">
+					  	<fieldset>
+						  <label for="walkDate">Date:</label>
+						  <input type="date" class="form-control" id="walkDate" name="walkDate" required>
+						  <label for="walkTime">Time:</label>
+						  <input type="time" class="form-control" id="walkTime" name="walkTime" required>
+						  <label for="walkDesc">Details:</label>
+						  <input type="text" class="form-control" id="walkDesc" name="walkDesc" placeholder="Enter details here">
+						  <label for="walkDur">Duration (minutes):</label>
+						  <input type="number" class="form-control" id="walkDur" name="walkDur" min="20" max="180">
+				      <div class="radio">
+	              <label><input type="radio" name="walkWeather" id="walkSunny" value="Sunny" checked>Sunny</label>
+	            </div>
+	            <div class="radio">
+	              <label><input type="radio" name="walkWeather" id="walkCloudy" value="Cloudy">Cloudy</label>
+	            </div>
+	            <div class="radio">
+	              <label><input type="radio" name="walkWeather" id="walkRainy" value="Rainy">Rainy</label>
+	            </div>
+	            <div class="radio">
+	              <label><input type="radio" name="walkWeather" id="walkSnowy" value="Snowy">Snowy</label>
+	            </div>
+	          </fieldset>
+	        </div>
+				  <button id="addWalk" type="submit" class="btn btn-info btn-md"><span class="glyphicon glyphicon-plus-sign"></span> Add Item</button>
+				</form>
+			</section>  <!--end col-sm-4-->
+      <section class="col-sm-8">
+				<h2>My Walks</h2>
+				<table  class="table table-striped" id="walkTable">
+					<thead>
+						<tr>
+							<th scope="col">Date</th>
+							<th scope="col">Time</th>
+							<th scope="col">Details</th>
+							<th scope="col">Duration</th>
+							<th scope="col">Weather</th>
+							<th scope="col"></th> <!--Column for delete button-->
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<button id="clearWalks" class="btn btn-info btn-md">
+				<span class="glyphicon glyphicon-trash"></span> Clear</button>
+				</section> <!--end col-sm-8-->
+      </div> <!--end row container-->
+			<footer>
+				<p class="text-center"><span class="glyphicon glyphicon-envelope"></span><a href="contact.html" 
+				class="white"> Contact</a></p>
+			</footer>
+	  </div> <!--end main Bootstrap container-->
+  </body>
+</html>
